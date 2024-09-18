@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+int conversao(char hexadecimal[]) {
+	int valordecimal = 0;
+	int i;
+	for(i = 0; i < 2; i++) {
+		if(hexadecimal[i] >= '0' && hexadecimal[i] <= '9') {
+			if(i == 0) {
+			valordecimal += (hexadecimal[i] - '0') * 16;
+		    } else {
+		    	valordecimal += (hexadecimal[i] - '0');
+			}
+		} else if(hexadecimal[i] >= 'A' && hexadecimal[i] <= 'F') {
+			if(i == 0) {
+			valordecimal += (hexadecimal[i] - 'A' + 10) * 16;
+		    } else {
+		    	valordecimal += (hexadecimal[i] - 'A' + 10);
+			}
+		}
+	}
+	return valordecimal;
+}
+
+int main() {
+	char hexadecimal[2];
+	int resultado, i;
+	
+	printf("Digite o valor hexadecimal: ");
+	for(i = 0; i < 2; i++){
+	scanf(" %c", &hexadecimal[i]);
+    }
+    resultado = conversao(hexadecimal);
+    printf("%d\n", resultado);
+    
+    return 0;
+}
