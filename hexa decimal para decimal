@@ -1,5 +1,5 @@
 #include<stdio.h>
-int conversao(char hexadecimal[]) {
+int conversor(char hexadecimal[]) {
 	int valordecimal = 0;
 	int i;
 	for(i = 0; i < 2; i++) {
@@ -21,15 +21,23 @@ int conversao(char hexadecimal[]) {
 }
 
 int main() {
-	char hexadecimal[2];
-	int resultado, i;
-	
-	printf("Digite o valor hexadecimal: ");
-	for(i = 0; i < 2; i++){
-	scanf(" %c", &hexadecimal[i]);
+    char mensagem[101];
+    char hex[3];
+    int i;
+    char resultado;
+
+    printf("Digite o valor de b: ");
+    scanf("%d", &b);
+
+    printf("Digite a mensagem: ");
+    scanf("%100s", mensagem);
+
+    for(i = 0; i < strlen(mensagem); i += 2) {
+            hex[0] = mensagem[i];
+            hex[1] = mensagem[i + 1];
+            resultado = conversor(hex);
+            printf("%c", resultado);    
     }
-    resultado = conversao(hexadecimal);
-    printf("%d\n", resultado);
-    
+
     return 0;
 }
