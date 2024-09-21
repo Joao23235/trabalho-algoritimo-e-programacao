@@ -26,8 +26,6 @@ int main() {
     int i;
     char resultado;
 
-    printf("Digite o valor de b: ");
-    scanf("%d", &b);
 
     printf("Digite a mensagem: ");
     scanf("%100s", mensagem);
@@ -35,6 +33,7 @@ int main() {
     for(i = 0; i < strlen(mensagem); i += 2) {
             hex[0] = mensagem[i];
             hex[1] = mensagem[i + 1];
+            hex[2] = '\0';
             resultado = conversor(hex);
             printf("%c", resultado);    
     }
