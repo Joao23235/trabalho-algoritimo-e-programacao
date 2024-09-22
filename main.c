@@ -5,7 +5,7 @@
 
 int main() {
     char mensagem[101];
-    char hex[3];
+    char hexadecimal[3];
     int i, j, b, verificacao, x = 1, numerocasos;
     char resultado;
     char fim[] = "00";
@@ -23,19 +23,18 @@ int main() {
         printf("\n");
     
         for(i = 0; i < strlen(mensagem); i += 2) {
-        	x = i / 2 + 1;
+            x = i / 2 + 1;
             verificacao = func_val(x, b);
             if(verificacao != 0) {
-                hex[0] = mensagem[i];
-                hex[1] = mensagem[i + 1];
-                hex[2] = '\0';
-                if(strcmp(hex, fim) == 0) {
+                hexadecimal[0] = mensagem[i];
+                hexadecimal[1] = mensagem[i + 1];
+                hexadecimal[2] = '\0';
+                if(strcmp(hexadecimal, fim) == 0) {
             	    break;
-			    }
+		}
             resultado = strtol(hex, NULL, 16);
             printf("%c", resultado);
             }
-        
         }
         printf("\n\n\n");
     }
