@@ -12,8 +12,9 @@ int main() {
     
     printf("Digite o numero de casos: ");
     scanf("%d", &numerocasos);
-    
-    for(j = 0; j < numerocasos; j++) {   //O programa entra em um loop que se repete 'numerocasos' vezes. Cada iteração do loop processa uma mensagem diferente.
+
+	//O programa entra em um loop que se repete 'numerocasos' vezes. Cada iteração do loop processa uma mensagem diferente.
+        for(j = 0; j < numerocasos; j++) {  
         printf("Digite o valor de b: ");
         scanf("%d", &b);
 
