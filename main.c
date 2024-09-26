@@ -6,7 +6,7 @@
 int main() {
     char mensagem[101];
     char hexadecimal[3];
-    int i, j, b, verificacao, x = 1, numerocasos;
+    int i, j, b, verificacao, posicao = 1, numerocasos;
     char resultado;
     char fim[] = "00";
     
@@ -26,9 +26,9 @@ int main() {
 	//Repete pela string em passos de 2 caracteres (ou seja, processa cada par de caracteres).
         for(i = 0; i < strlen(mensagem); i += 2) { 
 		
-	    // Calcula o valor de 'x'(posição atual do caractere) com base no índice de repetição atual 'i'.	
-            x = i / 2 + 1;  
-            verificacao = func_val(x, b);
+	    // Calcula o valor da posição atual do caractere com base no índice de repetição atual 'i'.	
+            posicao = i / 2 + 1;  
+            verificacao = func_val(posicao, b);
 		
 	    //Se verificacao for diferente de zero, ela extrai o par de caracteres atual da mensagem e armazena na string hexadecimal.	
             if(verificacao != 0) { 
