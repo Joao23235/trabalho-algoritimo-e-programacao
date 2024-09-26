@@ -3,6 +3,8 @@
 #include"func_val.h"
 
 int func_val(int x, int b) {
+
+    //Uso do tipo de variavel double pois tem um limite maior e evita que ocorra um overflow.
     double a0 = 186.752;
     double a1 = -148.235;
     double a2 = 34.5049;
